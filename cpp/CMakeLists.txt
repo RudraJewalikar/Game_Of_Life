@@ -12,7 +12,7 @@ set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -static -static-libgcc -st
 
 endif()
 
-add_library(gol STATIC src/Grid.cpp)
+add_library(gol STATIC src/Grid.cpp src/Cell.cpp)
 
 target_include_directories(gol PUBLIC ${CMAKE_SOURCE_DIR}/include)
 

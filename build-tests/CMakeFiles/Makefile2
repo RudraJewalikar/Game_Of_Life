@@ -84,12 +84,12 @@ clean: CMakeFiles/gol_tests.dir/clean
 CMakeFiles/gol.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\gol.dir\build.make CMakeFiles/gol.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\gol.dir\build.make CMakeFiles/gol.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="D:\Game of Life\build-tests\CMakeFiles" --progress-num=1,2 "Built target gol"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="D:\Game of Life\build-tests\CMakeFiles" --progress-num=1,2,3 "Built target gol"
 .PHONY : CMakeFiles/gol.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/gol.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "D:\Game of Life\build-tests\CMakeFiles" 2
+	$(CMAKE_COMMAND) -E cmake_progress_start "D:\Game of Life\build-tests\CMakeFiles" 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/gol.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "D:\Game of Life\build-tests\CMakeFiles" 0
 .PHONY : CMakeFiles/gol.dir/rule
@@ -110,12 +110,12 @@ CMakeFiles/gol.dir/clean:
 CMakeFiles/gol_cli.dir/all: CMakeFiles/gol.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\gol_cli.dir\build.make CMakeFiles/gol_cli.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\gol_cli.dir\build.make CMakeFiles/gol_cli.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="D:\Game of Life\build-tests\CMakeFiles" --progress-num=3,4 "Built target gol_cli"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="D:\Game of Life\build-tests\CMakeFiles" --progress-num=4,5 "Built target gol_cli"
 .PHONY : CMakeFiles/gol_cli.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/gol_cli.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "D:\Game of Life\build-tests\CMakeFiles" 4
+	$(CMAKE_COMMAND) -E cmake_progress_start "D:\Game of Life\build-tests\CMakeFiles" 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/gol_cli.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "D:\Game of Life\build-tests\CMakeFiles" 0
 .PHONY : CMakeFiles/gol_cli.dir/rule
@@ -136,12 +136,12 @@ CMakeFiles/gol_cli.dir/clean:
 CMakeFiles/gol_tests.dir/all: CMakeFiles/gol.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\gol_tests.dir\build.make CMakeFiles/gol_tests.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\gol_tests.dir\build.make CMakeFiles/gol_tests.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="D:\Game of Life\build-tests\CMakeFiles" --progress-num=5,6 "Built target gol_tests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="D:\Game of Life\build-tests\CMakeFiles" --progress-num=6,7 "Built target gol_tests"
 .PHONY : CMakeFiles/gol_tests.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/gol_tests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "D:\Game of Life\build-tests\CMakeFiles" 4
+	$(CMAKE_COMMAND) -E cmake_progress_start "D:\Game of Life\build-tests\CMakeFiles" 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/gol_tests.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "D:\Game of Life\build-tests\CMakeFiles" 0
 .PHONY : CMakeFiles/gol_tests.dir/rule

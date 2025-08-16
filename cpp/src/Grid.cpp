@@ -5,38 +5,38 @@ namespace gol {
 
 Grid::Grid(int width, int height, bool wrap)
     : W(width), H(height), wrapEdges(wrap),
-      curr(static_cast<size_t>(W)*H, 0),
-      next(static_cast<size_t>(W)*H, 0) {}
+      curr(static_cast<size_t>(W)*H), //dead cell by default
+      next(static_cast<size_t>(W)*H) {}
 
 int Grid::width() const noexcept { return W; }
 int Grid::height() const noexcept { return H; }
 
 void Grid::setCell(int x, int y, bool alive) {
     if (x < 0 || x >= W || y < 0 || y >= H) return;
-    curr[idx(x,y)] = alive ? 1u : 0u;
+    curr[idx(x,y)].setState(alive);
 }
 
 bool Grid::getCell(int x, int y) const {
     if (x < 0 || x >= W || y < 0 || y >= H) return false;
-    return curr[idx(x,y)] != 0;
+    return curr[idx(x,y)].getState();
 }
 
 void Grid::clear() {
-    std::fill(curr.begin(), curr.end(), 0);
+    std::fill(curr.begin(), curr.end(), new Cell());
 }
 
 void Grid::step(const int birthRule, const uint16_t surviveMask) {
     for (int y=0; y<H; ++y) {
         for (int x=0; x<W; ++x) {
             int n = neighborCount(x,y);
-            uint8_t alive = curr[idx(x,y)];
-            uint8_t out = 0;
+            bool alive = curr[idx(x,y)].getState();
+            bool nextState = 0;
             if (!alive) {
-                out = (n == birthRule) ? 1u : 0u;
+                nextState = (n == birthRule) ? true : false;
             } else {
-                out = ((surviveMask >> n) & 1u) ? 1u : 0u;
+                nextState = ((surviveMask >> n) & 1u) ? true : false;
             }
-            next[idx(x,y)] = out;
+            next[idx(x,y)] = nextState;
         }
     }
     curr.swap(next);
@@ -94,7 +94,7 @@ int Grid::neighborCount(int x, int y) const {
                 if (dx==0 && dy==0) continue;
                 int xx = nx(x + dx);
                 int yy = ny(y + dy);
-                sum += curr[idx(xx,yy)] != 0;
+                sum += curr[idx(xx,yy)].getState();
             }
         }
     } else {
@@ -105,7 +105,7 @@ int Grid::neighborCount(int x, int y) const {
                 int xx = x + dx;
                 int yy = y + dy;
                 if (xx < 0 || xx >= W || yy < 0 || yy >= H) continue;
-                sum += curr[idx(xx,yy)] != 0;
+                sum += curr[idx(xx,yy)].getState();
             }
         }
     }

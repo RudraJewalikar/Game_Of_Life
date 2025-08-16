@@ -154,6 +154,30 @@ gol_tests/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\gol_tests.dir\build.make CMakeFiles/gol_tests.dir/build
 .PHONY : gol_tests/fast
 
+src/Cell.obj: src/Cell.cpp.obj
+.PHONY : src/Cell.obj
+
+# target to build an object file
+src/Cell.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gol.dir\build.make CMakeFiles/gol.dir/src/Cell.cpp.obj
+.PHONY : src/Cell.cpp.obj
+
+src/Cell.i: src/Cell.cpp.i
+.PHONY : src/Cell.i
+
+# target to preprocess a source file
+src/Cell.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gol.dir\build.make CMakeFiles/gol.dir/src/Cell.cpp.i
+.PHONY : src/Cell.cpp.i
+
+src/Cell.s: src/Cell.cpp.s
+.PHONY : src/Cell.s
+
+# target to generate assembly for a file
+src/Cell.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gol.dir\build.make CMakeFiles/gol.dir/src/Cell.cpp.s
+.PHONY : src/Cell.cpp.s
+
 src/Grid.obj: src/Grid.cpp.obj
 .PHONY : src/Grid.obj
 
@@ -237,6 +261,9 @@ help:
 	@echo ... gol
 	@echo ... gol_cli
 	@echo ... gol_tests
+	@echo ... src/Cell.obj
+	@echo ... src/Cell.i
+	@echo ... src/Cell.s
 	@echo ... src/Grid.obj
 	@echo ... src/Grid.i
 	@echo ... src/Grid.s
