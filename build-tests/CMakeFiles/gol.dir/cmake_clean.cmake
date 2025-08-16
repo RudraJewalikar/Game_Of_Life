@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/gol.dir/src/Cell.cpp.obj"
+  "CMakeFiles/gol.dir/src/Cell.cpp.obj.d"
   "CMakeFiles/gol.dir/src/Grid.cpp.obj"
   "CMakeFiles/gol.dir/src/Grid.cpp.obj.d"
   "libgol.a"

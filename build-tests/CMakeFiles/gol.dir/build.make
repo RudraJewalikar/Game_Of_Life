@@ -83,17 +83,34 @@ CMakeFiles/gol.dir/src/Grid.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gol.dir/src/Grid.cpp.s"
 	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\Game of Life\cpp\src\Grid.cpp" -o CMakeFiles\gol.dir\src\Grid.cpp.s
 
+CMakeFiles/gol.dir/src/Cell.cpp.obj: CMakeFiles/gol.dir/flags.make
+CMakeFiles/gol.dir/src/Cell.cpp.obj: CMakeFiles/gol.dir/includes_CXX.rsp
+CMakeFiles/gol.dir/src/Cell.cpp.obj: D:/Game\ of\ Life/cpp/src/Cell.cpp
+CMakeFiles/gol.dir/src/Cell.cpp.obj: CMakeFiles/gol.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\Game of Life\build-tests\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/gol.dir/src/Cell.cpp.obj"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/gol.dir/src/Cell.cpp.obj -MF CMakeFiles\gol.dir\src\Cell.cpp.obj.d -o CMakeFiles\gol.dir\src\Cell.cpp.obj -c "D:\Game of Life\cpp\src\Cell.cpp"
+
+CMakeFiles/gol.dir/src/Cell.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gol.dir/src/Cell.cpp.i"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\Game of Life\cpp\src\Cell.cpp" > CMakeFiles\gol.dir\src\Cell.cpp.i
+
+CMakeFiles/gol.dir/src/Cell.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gol.dir/src/Cell.cpp.s"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\Game of Life\cpp\src\Cell.cpp" -o CMakeFiles\gol.dir\src\Cell.cpp.s
+
 # Object files for target gol
 gol_OBJECTS = \
-"CMakeFiles/gol.dir/src/Grid.cpp.obj"
+"CMakeFiles/gol.dir/src/Grid.cpp.obj" \
+"CMakeFiles/gol.dir/src/Cell.cpp.obj"
 
 # External object files for target gol
 gol_EXTERNAL_OBJECTS =
 
 libgol.a: CMakeFiles/gol.dir/src/Grid.cpp.obj
+libgol.a: CMakeFiles/gol.dir/src/Cell.cpp.obj
 libgol.a: CMakeFiles/gol.dir/build.make
 libgol.a: CMakeFiles/gol.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="D:\Game of Life\build-tests\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libgol.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="D:\Game of Life\build-tests\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libgol.a"
 	$(CMAKE_COMMAND) -P CMakeFiles\gol.dir\cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\gol.dir\link.txt --verbose=$(VERBOSE)
 

@@ -1,6 +1,7 @@
 #pragma once
 #include <vector>
 #include <cstdint>
+#include "Cell.hpp"
 
 namespace gol
 {
@@ -8,6 +9,18 @@ namespace gol
     // Default rules: B3/S23 via step()'s defaults.
     class Grid
     {
+    private:
+        int W, H;
+        bool wrapEdges;
+        std::vector<Cell> curr, next;
+
+        // Index helpers
+        inline int idx(int x, int y) const noexcept { return y * W + x; }
+
+        // Neighbor helpers (definitions in .cpp)
+        int neighborCount(int x, int y) const;
+        int nx(int x) const noexcept;
+        int ny(int y) const noexcept;
     public:
         // Construct a width x height grid. wrap=true makes edges toroidal.
         Grid(int width, int height, bool wrap = true);
@@ -30,19 +43,6 @@ namespace gol
 
         // Toggle wrapping if needed.
         void setWrap(bool wrap) noexcept;
-
-    private:
-        int W, H;
-        bool wrapEdges;
-        std::vector<uint8_t> curr, next;
-
-        // Index helpers
-        inline int idx(int x, int y) const noexcept { return y * W + x; }
-
-        // Neighbor helpers (definitions in .cpp)
-        int neighborCount(int x, int y) const;
-        int nx(int x) const noexcept;
-        int ny(int y) const noexcept;
     };
 
 } // namespace gol
