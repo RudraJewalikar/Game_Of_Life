@@ -1,0 +1,2 @@
+C:\mingw64\bin\ar.exe qc libgol.a CMakeFiles/gol.dir/src/Grid.cpp.obj
+C:\mingw64\bin\ranlib.exe libgol.a

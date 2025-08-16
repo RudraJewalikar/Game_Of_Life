@@ -1,0 +1,5 @@
+D:/Game of Life/build-tests/CMakeFiles/gol.dir
+D:/Game of Life/build-tests/CMakeFiles/gol_cli.dir
+D:/Game of Life/build-tests/CMakeFiles/gol_tests.dir
+D:/Game of Life/build-tests/CMakeFiles/edit_cache.dir
+D:/Game of Life/build-tests/CMakeFiles/rebuild_cache.dir
