@@ -23,7 +23,7 @@ namespace gol
         int ny(int y) const noexcept;
     public:
         // Construct a width x height grid. wrap=true makes edges toroidal.
-        Grid(int width, int height, bool wrap = true);
+        Grid(int width=10, int height=10, bool wrap = true);
 
         // Dimensions
         int width() const noexcept;

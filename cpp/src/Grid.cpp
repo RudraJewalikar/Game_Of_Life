@@ -5,8 +5,8 @@ namespace gol {
 
 Grid::Grid(int width, int height, bool wrap)
     : W(width), H(height), wrapEdges(wrap),
-      curr(static_cast<size_t>(W)*H), //dead cell by default
-      next(static_cast<size_t>(W)*H) {}
+      curr(W*H), //dead cell by default
+      next(W*H){}
 
 int Grid::width() const noexcept { return W; }
 int Grid::height() const noexcept { return H; }
